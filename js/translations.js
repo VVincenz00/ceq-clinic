@@ -1,10 +1,10 @@
 const translations = {
     en: {
-        clinic_name: "CEQ Health Clinic",
-        tagline: "Your Health, Our Priority",
+        clinic_name: "CEQ - Clinique d'endocrinologie de Québec",
+        tagline: "Pas de PV, pas de RDV!",
         call_us: "📞 Call Us",
         visit_us: "📍 Visit Us",
-        address_main: "1155 avenue germain des près<br>bureau 2050<br>Québec g1v 4k5",
+        address_main: "1155 avenue germain des près<br>Bureau 2050<br>Québec G1B 4K5",
         directions_btn: "🗺️ How to Get Here in Details",
         footer_text: "&copy; 2024 CEQ Health Clinic. All rights reserved.",
         directions_header: "How to Get Here",
@@ -20,12 +20,12 @@ const translations = {
         transit_text_1: "Bus routes 12, 34, and 56 stop directly in front of our clinic.",
         transit_text_2: "The Medical District Metro station is a 5-minute walk away.",
         hours_header: "🕐 Office Hours",
-        hours_text: "Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed",
+        hours_text: "Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: Closed <br>Sunday: Closed",
         open_maps: "📍 Open in Google Maps"
     },
     fr: {
-        clinic_name: "Clinique Santé CEQ",
-        tagline: "Votre santé, notre priorité",
+        clinic_name: "CEQ - Clinique d'endocrinologie de Québec",
+        tagline: "Pas de PV, pas de RDV!",
         call_us: "📞 Appelez-nous",
         visit_us: "📍 Visitez-nous",
         address_main: "1155 avenue germain des près<br>bureau 2050<br>Québec g1v 4k5",
@@ -44,7 +44,7 @@ const translations = {
         transit_text_1: "Les lignes d'autobus 12, 34 et 56 s'arrêtent directement devant notre clinique.",
         transit_text_2: "La station de métro Quartier Médical est à 5 minutes de marche.",
         hours_header: "🕐 Heures d'ouverture",
-        hours_text: "Lundi - Vendredi : 8h00 - 18h00<br>Samedi : 9h00 - 14h00<br>Dimanche : Fermé",
+        hours_text: "Lundi - Vendredi : 8h00 - 17h00<br>Samedi : Fermé <br>Dimanche : Fermé",
         open_maps: "📍 Ouvrir dans Google Maps"
     }
 };
