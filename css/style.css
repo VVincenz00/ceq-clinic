@@ -44,6 +44,16 @@ header {
     border-bottom: 3px solid #5799c7;
 }
 
+/* Clinic Logo */
+.clinic-logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
 /* Language Switcher */
 .lang-switch {
     position: absolute;
@@ -231,6 +241,10 @@ footer {
         text-align: right;
     }
     
+    .clinic-logo {
+        width: 100px;
+    }
+    
     .container {
         padding: 30px 20px;
         border-radius: 15px;
@@ -265,6 +279,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .clinic-logo {
+        width: 80px;
+    }
+
     .clinic-name {
         font-size: 1.7rem;
     }
