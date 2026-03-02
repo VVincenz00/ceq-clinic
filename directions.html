@@ -11,14 +11,15 @@
 <body>
     <main class="container">
         <header>
-            <h1 class="clinic-name">How to Get Here</h1>
-            <a href="index.html" class="back-link">← Back to Home</a>
+            <div id="lang-switcher" class="lang-switch"></div>
+            <h1 class="clinic-name" data-i18n="directions_header">How to Get Here</h1>
+            <a href="index.html" class="back-link" data-i18n="back_home">← Back to Home</a>
         </header>
         
         <section class="directions-content">
             <div class="info-card">
-                <h2>📍 Our Address</h2>
-                <address>
+                <h2 data-i18n="our_address_header">📍 Our Address</h2>
+                <address data-i18n="address_full">
                     CEQ Health Clinic<br>
                     123 Healthcare Boulevard<br>
                     Medical District<br>
@@ -27,37 +28,38 @@
             </div>
             
             <div class="info-card">
-                <h2>🚗 By Car</h2>
-                <p>From Downtown: Take Main Street north for 2 miles, turn right on Healthcare Boulevard. We're on the left side.</p>
-                <p>From Highway 101: Take exit 45, turn left onto Medical Drive, then right on Healthcare Boulevard.</p>
-                <p><strong>Parking:</strong> Free parking available in our lot behind the building.</p>
+                <h2 data-i18n="by_car_header">🚗 By Car</h2>
+                <p data-i18n="car_text_1">From Downtown: Take Main Street north for 2 miles, turn right on Healthcare Boulevard. We're on the left side.</p>
+                <p data-i18n="car_text_2">From Highway 101: Take exit 45, turn left onto Medical Drive, then right on Healthcare Boulevard.</p>
+                <p><strong data-i18n="parking_label">Parking:</strong> <span data-i18n="parking_text">Free parking available in our lot behind the building.</span></p>
             </div>
             
             <div class="info-card">
-                <h2>🚌 By Public Transit</h2>
-                <p>Bus routes 12, 34, and 56 stop directly in front of our clinic.</p>
-                <p>The Medical District Metro station is a 5-minute walk away.</p>
+                <h2 data-i18n="transit_header">🚌 By Public Transit</h2>
+                <p data-i18n="transit_text_1">Bus routes 12, 34, and 56 stop directly in front of our clinic.</p>
+                <p data-i18n="transit_text_2">The Medical District Metro station is a 5-minute walk away.</p>
             </div>
             
             <div class="info-card">
-                <h2>🕐 Office Hours</h2>
-                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                <h2 data-i18n="hours_header">🕐 Office Hours</h2>
+                <p data-i18n="hours_text">Monday - Friday: 8:00 AM - 6:00 PM<br>
                 Saturday: 9:00 AM - 2:00 PM<br>
                 Sunday: Closed</p>
             </div>
             
             <div class="map-placeholder">
-                <p>📍 <a href="https://maps.google.com/?q=123+Healthcare+Boulevard" target="_blank" rel="noopener">Open in Google Maps</a></p>
+                <p>📍 <a href="https://maps.google.com/?q=123+Healthcare+Boulevard" target="_blank" rel="noopener" data-i18n="open_maps">Open in Google Maps</a></p>
             </div>
         </section>
         
         <section class="directions-section">
-            <a href="index.html" class="directions-button">← Back to Home</a>
+            <a href="index.html" class="directions-button" data-i18n="back_home">← Back to Home</a>
         </section>
         
         <footer>
-            <p>&copy; 2024 CEQ Health Clinic. All rights reserved.</p>
+            <p data-i18n="footer_text">&copy; 2024 CEQ Health Clinic. All rights reserved.</p>
         </footer>
     </main>
+    <script src="js/translations.js"></script>
 </body>
 </html>

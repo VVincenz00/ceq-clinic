@@ -11,19 +11,20 @@
 <body>
     <main class="container">
         <header>
-            <h1 class="clinic-name">CEQ Health Clinic</h1>
-            <p class="tagline">Your Health, Our Priority</p>
+            <div id="lang-switcher" class="lang-switch"></div>
+            <h1 class="clinic-name" data-i18n="clinic_name">CEQ Health Clinic</h1>
+            <p class="tagline" data-i18n="tagline">Your Health, Our Priority</p>
         </header>
         
         <section class="contact-info">
             <div class="info-card">
-                <h2>📞 Call Us</h2>
-                <a href="tel:+15551234567" class="phone-link">(555) 123-4567</a>
+                <h2 data-i18n="call_us">📞 Call Us</h2>
+                <a href="tel:+15551234567" class="phone-link" aria-label="Phone number">(555) 123-4567</a>
             </div>
             
             <div class="info-card">
-                <h2>📍 Visit Us</h2>
-                <address>
+                <h2 data-i18n="visit_us">📍 Visit Us</h2>
+                <address data-i18n="address_main">
                     123 Healthcare Boulevard<br>
                     Medical District<br>
                     City, State 12345
@@ -32,14 +33,15 @@
         </section>
         
         <section class="directions-section">
-            <a href="directions.html" class="directions-button">
+            <a href="directions.html" class="directions-button" data-i18n="directions_btn">
                 🗺️ How to Get Here in Details
             </a>
         </section>
         
         <footer>
-            <p>&copy; 2024 CEQ Health Clinic. All rights reserved.</p>
+            <p data-i18n="footer_text">&copy; 2024 CEQ Health Clinic. All rights reserved.</p>
         </footer>
     </main>
+    <script src="js/translations.js"></script>
 </body>
 </html>

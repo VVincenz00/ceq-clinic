@@ -1,0 +1,101 @@
+const translations = {
+    en: {
+        clinic_name: "CEQ Health Clinic",
+        tagline: "Your Health, Our Priority",
+        call_us: "📞 Call Us",
+        visit_us: "📍 Visit Us",
+        address_main: "123 Healthcare Boulevard<br>Medical District<br>City, State 12345",
+        directions_btn: "🗺️ How to Get Here in Details",
+        footer_text: "&copy; 2024 CEQ Health Clinic. All rights reserved.",
+        directions_header: "How to Get Here",
+        back_home: "← Back to Home",
+        our_address_header: "📍 Our Address",
+        address_full: "CEQ Health Clinic<br>123 Healthcare Boulevard<br>Medical District<br>City, State 12345",
+        by_car_header: "🚗 By Car",
+        car_text_1: "From Downtown: Take Main Street north for 2 miles, turn right on Healthcare Boulevard. We're on the left side.",
+        car_text_2: "From Highway 101: Take exit 45, turn left onto Medical Drive, then right on Healthcare Boulevard.",
+        parking_label: "Parking:",
+        parking_text: "Free parking available in our lot behind the building.",
+        transit_header: "🚌 By Public Transit",
+        transit_text_1: "Bus routes 12, 34, and 56 stop directly in front of our clinic.",
+        transit_text_2: "The Medical District Metro station is a 5-minute walk away.",
+        hours_header: "🕐 Office Hours",
+        hours_text: "Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed",
+        open_maps: "📍 Open in Google Maps"
+    },
+    fr: {
+        clinic_name: "Clinique Santé CEQ",
+        tagline: "Votre santé, notre priorité",
+        call_us: "📞 Appelez-nous",
+        visit_us: "📍 Visitez-nous",
+        address_main: "123 Boulevard de la Santé<br>Quartier Médical<br>Ville, Province 12345",
+        directions_btn: "🗺️ Comment s'y rendre en détails",
+        footer_text: "&copy; 2024 Clinique Santé CEQ. Tous droits réservés.",
+        directions_header: "Comment s'y rendre",
+        back_home: "← Retour à l'accueil",
+        our_address_header: "📍 Notre adresse",
+        address_full: "Clinique Santé CEQ<br>123 Boulevard de la Santé<br>Quartier Médical<br>Ville, Province 12345",
+        by_car_header: "🚗 En voiture",
+        car_text_1: "Du centre-ville : Prenez la rue Principale vers le nord sur 3 km, tournez à droite sur le Boulevard de la Santé. Nous sommes à gauche.",
+        car_text_2: "De l'autoroute 101 : Prenez la sortie 45, tournez à gauche sur la Promenade Médicale, puis à droite sur le Boulevard de la Santé.",
+        parking_label: "Stationnement :",
+        parking_text: "Stationnement gratuit disponible dans notre lot derrière le bâtiment.",
+        transit_header: "🚌 En transport en commun",
+        transit_text_1: "Les lignes d'autobus 12, 34 et 56 s'arrêtent directement devant notre clinique.",
+        transit_text_2: "La station de métro Quartier Médical est à 5 minutes de marche.",
+        hours_header: "🕐 Heures d'ouverture",
+        hours_text: "Lundi - Vendredi : 8h00 - 18h00<br>Samedi : 9h00 - 14h00<br>Dimanche : Fermé",
+        open_maps: "📍 Ouvrir dans Google Maps"
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const langSwitcher = document.getElementById('lang-switcher');
+    
+    // Detect language: LocalStorage -> Browser Language -> Default 'en'
+    let currentLang = localStorage.getItem('preferredLang') || (navigator.language && navigator.language.startsWith('fr') ? 'fr' : 'en');
+    
+    // Apply language on load
+    setLanguage(currentLang);
+
+    // Create buttons if container exists
+    if (langSwitcher) {
+        langSwitcher.innerHTML = `
+            <button onclick="setLanguage('en')" class="lang-btn ${currentLang === 'en' ? 'active' : ''}">EN</button>
+            <span class="lang-separator">|</span>
+            <button onclick="setLanguage('fr')" class="lang-btn ${currentLang === 'fr' ? 'active' : ''}">FR</button>
+        `;
+    }
+});
+
+function setLanguage(lang) {
+    // Update LocalStorage
+    try {
+        localStorage.setItem('preferredLang', lang);
+    } catch (e) {
+        // Ignore storage errors (e.g., private mode)
+    }
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+
+    // Update text content
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Update active button state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.textContent.toLowerCase() === lang) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+// Expose function globally
+window.setLanguage = setLanguage;
