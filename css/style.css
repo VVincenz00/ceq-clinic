@@ -138,6 +138,19 @@ address {
     color: #555;
 }
 
+.image-scroll-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.clinic-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Directions Section */
 .directions-section {
     text-align: center;
@@ -238,6 +251,16 @@ footer {
     
     .info-card {
         padding: 20px;
+    }
+
+    .image-scroll-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .clinic-photo {
+        width: 180%;
+        max-width: none;
     }
 }
 
