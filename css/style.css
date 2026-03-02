@@ -200,22 +200,27 @@ address {
     color: #5799c7;
 }
 
-.map-placeholder {
-    background: #e9ecef;
+.map-container {
     border-radius: 15px;
-    padding: 30px;
-    text-align: center;
+    overflow: hidden;
     margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.map-placeholder a {
+.map-link-wrapper {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+}
+
+.map-link-wrapper a {
     color: #5799c7;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
 }
 
-.map-placeholder a:hover {
+.map-link-wrapper a:hover {
     color: #3c6b8f;
 }
 
