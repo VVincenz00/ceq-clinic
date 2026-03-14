@@ -20,7 +20,8 @@ const translations = {
         parking_text: "Free parking available anywhere at Laurier-Quebec.",
         hours_header: "🕐 Office Hours",
         hours_text: "Monday to Friday: 8:00 AM - 5:00 PM<br>Saturday: Closed <br>Sunday: Closed",
-        open_maps: "📍 Open in Google Maps"
+        open_maps: "📍 Open in Google Maps",
+        know_more: "🔗 To know more about the clinic"
     },
     fr: {
         clinic_name: "CEQ - Clinique d'endocrinologie de Québec",
@@ -43,7 +44,8 @@ const translations = {
         parking_text: "Vous pouvez vous stationner à n'importe quel endroit au centre d'achat",
         hours_header: "🕐 Heures d'ouverture",
         hours_text: "Lundi au Vendredi : 8h00 - 17h00<br>Samedi : Fermé <br>Dimanche : Fermé",
-        open_maps: "📍 Ouvrir dans Google Maps"
+        open_maps: "📍 Ouvrir dans Google Maps",
+        know_more: "🔗 Pour en savoir plus sur la clinique"
     }
 };
 
